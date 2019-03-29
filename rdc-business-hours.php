@@ -58,7 +58,7 @@ function rdc_store_hours() {
 	// 	return "Sorry, we're closed. Today's hours are " . $store_hours->hours_today() . ".";
 	// }
 	// $store_hours = new StoreHours($hours, $exceptions, $template);
-	$store_hours->render();
+	return $store_hours->render();
 
 
 }
