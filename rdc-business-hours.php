@@ -7,7 +7,7 @@
  * Author URI:      https://ranchodeluxe.dev
  * Text Domain:     rdc-business-hours
  * Domain Path:     /languages
- * Version:         0.1.2
+ * Version:         0.1.3
  * Github Repository: ranchodeluxemedia/rdc-business-hours
  * Github Plugin URI: ranchodeluxemedia/rdc-business-hours
  *
@@ -23,6 +23,14 @@ add_filter( 'github_updater_override_dot_org', function() {
         'rdc-business-hours/rdc-business-hours.php' //plugin format
     ];
 });
+
+// Disables WP-Cron for API calls
+add_filter( 'github_updater_disable_wpcron', '__return_true' );
+
+
+// hook into API::exit_no_update() so that the user can always check for a new update
+add_filter( 'ghu_always_fetch_update', '__return_true' );
+
 
 
 // require __DIR__ . '/vendor/autoload.php';
