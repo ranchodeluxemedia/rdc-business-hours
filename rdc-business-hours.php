@@ -17,6 +17,12 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
+// github updater overide dot org updates
+add_filter( 'github_updater_override_dot_org', function() {
+    return [
+        'rdc-business-hours/rdc-business-hours.php' //plugin format
+    ];
+});
 
 
 // require __DIR__ . '/vendor/autoload.php';
