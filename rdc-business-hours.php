@@ -51,7 +51,7 @@ function rdc_store_hours() {
 		'separator' => " - ",
 		'join' => " and ",
 		'format' => "g:ia",
-		'hours' => "<span class='rdc-store-hours'>{%open%}{%separator%}{%closed%}</span>",
+		'hours' => "{%open%}{%separator%}{%closed%}",
 	);
 
 	$store_hours = new StoreHours($hours, $exceptions, $template);
