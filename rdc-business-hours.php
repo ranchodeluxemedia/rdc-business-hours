@@ -1,13 +1,15 @@
 <?php
 /**
  * Plugin Name:     Rdc Business Hours
- * Plugin URI:      https://ranchodeluxe.dev
+ * Plugin URI:      https://github.com/ranchodeluxemedia/rdc-business-hours
  * Description:     Simple shortcode to put business hours in the topbar
  * Author:          Chris Canterbury
  * Author URI:      https://ranchodeluxe.dev
  * Text Domain:     rdc-business-hours
  * Domain Path:     /languages
  * Version:         0.1.0
+ * Github Repository: ranchodeluxemedia/rdc-business-hours
+ * Github Plugin URI: ranchodeluxemedia/rdc-business-hours
  *
  * @package         Rdc_Business_Hours
  */
