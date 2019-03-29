@@ -7,7 +7,7 @@
  * Author URI:      https://ranchodeluxe.dev
  * Text Domain:     rdc-business-hours
  * Domain Path:     /languages
- * Version:         0.1.1
+ * Version:         0.1.2
  * Github Repository: ranchodeluxemedia/rdc-business-hours
  * Github Plugin URI: ranchodeluxemedia/rdc-business-hours
  *
