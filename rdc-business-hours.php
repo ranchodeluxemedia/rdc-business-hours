@@ -46,7 +46,7 @@ function rdc_store_hours() {
 		'hours' => "{%open%}{%separator%}{%closed%}",
 	);
 
-	$store_hours = new StoreHours($hours, $exceptions, $config, $template);
+	$store_hours = new StoreHours($hours, $exceptions, $template);
 
 	// Display
 
@@ -55,7 +55,7 @@ function rdc_store_hours() {
 	// } else {
 	// 	return "Sorry, we're closed. Today's hours are " . $store_hours->hours_today() . ".";
 	// }
-	$store_hours = new StoreHours($hours, $exceptions, $template);
+	// $store_hours = new StoreHours($hours, $exceptions, $template);
 	$store_hours->render();
 
 
