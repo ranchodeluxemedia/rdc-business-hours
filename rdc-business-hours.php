@@ -39,13 +39,13 @@ function rdc_store_hours() {
 	$exceptions = array();
 	$config = array();
 	$template = array(
-		'open' => "Yes, we're open! Come by before {%closed%}!",
-		'closed' => "Sorry, we're closed. Today's hours are {%hours%}.",
-		'closed_all_day' => "Sorry, we're closed today. We'll be back tomorrow at 9:00AM.",
+		'open' => "<span class='rdc-store-hours'>Yes, we're open! Come by before {%closed%}!</span>",
+		'closed' => "<span class='rdc-store-hours'>Sorry, we're closed. Today's hours are {%hours%}.</span>",
+		'closed_all_day' => "<span class='rdc-store-hours'>Sorry, we're closed today. We'll be back tomorrow at 9:00AM.</span>",
 		'separator' => " - ",
 		'join' => " and ",
 		'format' => "g:ia",
-		'hours' => "{%open%}{%separator%}{%closed%}",
+		'hours' => "<span class='rdc-store-hours'>{%open%}{%separator%}{%closed%}</span>",
 	);
 
 	$store_hours = new StoreHours($hours, $exceptions, $template);
