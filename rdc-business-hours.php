@@ -36,16 +36,27 @@ function rdc_store_hours() {
 
 	$exceptions = array();
 	$config = array();
+	$template = array(
+		'open' => "Yes, we're open! Come by before {%closed%}!",
+		'closed' => "Sorry, we're closed. Today's hours are {%hours%}.",
+		'closed_all_day' => "Sorry, we're closed today. We'll be back tomorrow at 9:00AM.",
+		'separator' => " - ",
+		'join' => " and ",
+		'format' => "g:ia",
+		'hours' => "{%open%}{%separator%}{%closed%}",
+	);
 
-	$store_hours = new StoreHours($hours, $exceptions, $config);
+	$store_hours = new StoreHours($hours, $exceptions, $config, $template);
 
 	// Display
 
-	if($store_hours->is_open()) {
-		return "Yes, we're open! Today's hours are " . $store_hours->hours_today() . ".";
-	} else {
-		return "Sorry, we're closed. Today's hours are " . $store_hours->hours_today() . ".";
-	}
+	// if($store_hours->is_open()) {
+	// 	return "Yes, we're open! Today's hours are " . $store_hours->hours_today() . ".";
+	// } else {
+	// 	return "Sorry, we're closed. Today's hours are " . $store_hours->hours_today() . ".";
+	// }
+	$store_hours = new StoreHours($hours, $exceptions, $template);
+	return $store_hours->render();
 
 
 }
